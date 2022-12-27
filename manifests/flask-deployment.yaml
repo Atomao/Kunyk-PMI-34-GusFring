@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: flask
+  name: flask
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: flask
+  strategy:
+    type: Recreate # RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: flask
+    spec:
+      containers:
+        - image: pppdddppp/flaskx
+          name: flaskx
+          ports:
+            - containerPort: 5000
+          resources:
+            requests:
+              memory: "1Mi"
+              cpu: "30m"
+            limits:
+              memory: "101Mi" # "100Mi"
+              cpu: "100m" # "100m"
+

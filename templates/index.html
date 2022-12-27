@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block content %} {% with messages =
+get_flashed_messages() %} {% if messages %}
+<div class="notification is-danger">{{ messages[0] }}</div>
+{% endif %} {% endwith %}
+<div class="notification is-info is-max-desktop">
+  Generate and solve random linear equations system
+</div>
+<form method="POST" action="/">
+  <div class="field">
+    <div class="control">
+      <input
+        class="input is-large"
+        type="number"
+        name="number_of_unknowns"
+        placeholder="Number of unknowns"
+      />
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <input
+        class="input is-large"
+        type="number"
+        name="left"
+        placeholder="Left bound"
+      />
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <input
+        class="input is-large"
+        type="number"
+        name="right"
+        placeholder="Right bound"
+      />
+    </div>
+  </div>
+  <button class="button is-block is-info is-medium is-max-desktop">
+    Calculate
+  </button>
+</form>
+{% endblock %}

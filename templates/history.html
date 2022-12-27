@@ -1,0 +1,15 @@
+<body>
+  <div>Info about Username: {{ user.name }}</div>
+  <ul id="navigation">
+    {% for computation in history %}
+    <li>Number of unknowns {{ computation.number_of_unknowns }}</li>
+    <li>
+      Range from {{ computation.left_bound }} to {{ computation.right_bound }}
+    </li>
+    <li>Duration: {{ computation.computation_time }}</li>
+    <hr />
+    {% else %}
+    <li><em>No history found</em></li>
+    {% endfor %}
+  </ul>
+</body>

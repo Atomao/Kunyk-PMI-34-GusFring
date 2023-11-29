@@ -1,0 +1,28 @@
+{
+  "animals": [
+    {
+      "name": "Buddy",
+      "species": "Dog",
+      "breed": "Labrador Retriever",
+      "gender": "male",
+      "age": 3,
+      "idNumber": "ANM1001"
+    },
+    {
+      "name": "Whiskers",
+      "species": "Cat",
+      "breed": "Maine Coon",
+      "gender": "female",
+      "age": 2,
+      "idNumber": "ANM1002"
+    },
+    {
+      "name": "Charlie",
+      "species": "Dog",
+      "breed": "Beagle",
+      "gender": "male",
+      "age": 4,
+      "idNumber": "ANM1003"
+    }
+  ]
+}
